@@ -1,0 +1,26 @@
+<!-- accounts/templates/accounts/otp_verification.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Verification</title>
+  <link rel="stylesheet" href="{% static 'accounts/css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>OTP Verification for {{ email }}</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Verify OTP</button>
+    </form>
+    <button id="resend-btn">Resend OTP</button>
+    <span id="timer"></span>
+    <div id="resend-msg"></div>
+  </div>
+  <script src="{% static 'accounts/js/resend_timer.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!-- accounts/templates/accounts/success.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Successful</title>
+  <link rel="stylesheet" href="{% static 'accounts/css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Successful!</h2>
+    <p>Your email {{ email }} has been verified.</p>
+  </div>
+</body>
+</html>
