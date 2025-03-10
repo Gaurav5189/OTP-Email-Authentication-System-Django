@@ -1,2 +1,17 @@
 *.agdai
 MAlonzo/**
+
+# Virtual environments
+venv/
+*.pyc
+__pycache__/
+
+# Django stuff:
+*.log
+db.sqlite3
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store

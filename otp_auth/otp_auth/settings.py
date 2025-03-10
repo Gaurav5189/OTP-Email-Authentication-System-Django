@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
+from decouple import config # type: ignore
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,8 +47,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'manntim131@gmail.com'         # Replace with your Gmail address
-EMAIL_HOST_PASSWORD = 'womi mikp qnal nsnh'        # Replace with your Gmail password or App Password
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')         # Replace with your Gmail address
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')        # Replace with your Gmail password or App Password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
