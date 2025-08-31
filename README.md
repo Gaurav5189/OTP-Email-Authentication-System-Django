@@ -27,5 +27,5 @@ This is a web-based email authentication system built with Django that implement
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/Gaurav5189/OTP-Verification.git
+   git clone https://github.com/Gaurav5189/OTP-Email-Authentication-System-Django.git
    cd your-repo
